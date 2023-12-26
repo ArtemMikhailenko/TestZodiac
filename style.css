@@ -1,0 +1,357 @@
+/* Style the video: 100% width and height to cover the entire window */
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  
+}
+a{
+    text-decoration: none;
+    
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+button{
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    box-shadow: none;
+    border: 0;
+}
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+[class*="__container"] {
+	width: 79.167vw;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+	margin: 0 auto;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family:'Roboto', sans-serif;
+}
+
+#myVideo {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit:fill;
+    z-index: 0;
+}
+header{
+    position: relative;
+    height: 48.292vw;
+    width: 100%;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+
+   
+}
+.header a {
+    color: #fff;
+}
+.header__container{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100vw;
+    padding: 0;
+    display: flex;
+    height: 100%;
+    background-color: #0000009e;
+    font-weight: 700;
+    /* background: rgb(0,0,10);
+    background: linear-gradient(32deg, rgba(0,0,10,0.24702380952380953) 19%, rgba(255,255,255,0) 100%); */
+}
+.header_head{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    gap: 10.417vw;
+    height: 6.944vw;
+    align-items: center;
+    font-size: 2.083vw;
+    font-weight: 700;
+    padding-left: 12.500vw;
+    z-index: 5;
+ }
+ .header_head_gallery{
+    z-index: 5;
+ }
+ .header_head_contact{
+    z-index: 5;
+ }
+ .header_head_projects{
+    z-index: 5;
+ }
+ .header_head_logo{
+    z-index: 5;
+ }
+ .header_head::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 6.944vw;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.header_head_logo{
+    opacity: 1;
+}
+.header_head_logo::before{
+    opacity: 0;
+}
+.header_head.scroll::before {
+	opacity: 1;
+
+}
+.header_head_logo.scroll_logo::before {
+	opacity: 0;
+}
+.header_main{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: 10.417vw;
+    
+}
+.header_main_title{
+    
+    font-size: 5.556vw;
+    
+}
+.header_main_subtitle{
+    font-size: 2.778vw;
+    color: #b6afaf;
+}
+
+.header_main_button_block{
+    display: flex;
+    padding-top: 5.556vw;
+    gap: 5.556vw;
+}
+.header_main_button_first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30,64,87);
+    width: 13.889vw;
+    height: 3.472vw;
+    border-radius: 5px;
+}
+.header_main_button_first button{
+    text-transform:uppercase;
+    font-size: 1.250vw;
+    font-weight: 300;
+}
+.header_main_button_second button{
+    text-transform:uppercase;
+    font-size: 1.250vw;
+    font-weight: 300;
+}
+
+.header_main_button_second{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16.667vw;
+    height: 3.472vw;
+    border-radius: 5px;
+    background-color: rgb(136,94,41);
+}
+
+.page_about{
+    background-image: url(/img/ab.jpg);
+    width: 100%;
+    height: 49.306vw;
+    object-fit: fill;
+    display: flex;
+    align-items: center;
+}
+.page_about__container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.about_video{
+    padding-top: 6.944vw;
+}
+.about_text{
+    width: 38.194vw;
+    text-align: center;
+}
+.about_text_title{
+    font-size: 2.778vw;
+}
+.about_text_txt{
+    font-size: 1.667vw;
+}
+.partners_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.556vw;
+    padding-top: 1.389vw;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+   }
+    100% {
+        transform: translateX(calc(-10.417vw * 7));
+   }
+}
+.partners_slider {
+    background: white;
+    
+    height: 13.889vw;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 66.667vw;
+     align-items: center;
+	display: flex;
+	justify-content: center;
+    padding-bottom: 2.111vw;
+}
+.partners_slider::before, .partners_slider::after {
+   
+    content: "";
+    height: 13.889vw;
+    position: absolute;
+    width: 13.889vw;
+    z-index: 2;
+}
+.partners_slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.partners_slider::before {
+    left: 0;
+    top: 0;
+}
+.partners_slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    height: 6.944vw;
+    width: calc(17.361vw * 14);
+}
+.partners_slider .slide {
+    height: 6.944vw;
+    width: 10.417vw;
+    padding-right: 1.389vw;
+}
+footer{
+    width: 100%;
+    height: 20.833vw;
+    background-color: #e4e9ed;
+    font-size: 1.111vw;
+    margin-top: 20px;
+}
+.footer_blocks{
+    display: flex;
+    gap: 0.694vw;
+    justify-content: space-evenly;
+    padding-top: 3.472vw;
+}
+.footer_block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 22.917vw;
+    height: 13.889vw;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75)
+}
+.footer_block_content{
+    text-align: center;
+    padding-top: 0.694vw;
+}
+.about_video iframe{
+    width: 38.889vw;
+    height: 21.875vw;
+}
