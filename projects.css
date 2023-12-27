@@ -259,3 +259,63 @@ font-size: 4.444vw;
     color: #7b7b7b;
     padding-right: 3.472vw;
  }
+
+ @media (max-width: 1000px){
+    .burger-menu{
+        display: block;
+    }
+    .header_head{
+        display: none;
+    }
+    .header_main_button_first{
+        width: 15.000vw;
+        height: 4.000vw;
+    }
+    .header_main_button_first button {
+        font-size: 1.700vw;
+        font-weight: 600;
+    }
+    .offer_card_title{
+        font-size: 3vw;
+     }
+     .offer_card_text{
+        font-size: 1.400vw;
+     }
+}
+@media (max-width: 770px){
+ .offer_card_title{
+        font-size: 3.117vw;
+     }
+     .offer_card_text{
+        font-size: 1.429vw;
+     }
+
+}
+@media (max-width: 600px){
+    .offer_card_title{
+           font-size: 3.117vw;
+        }
+        .offer_card_text{
+           font-size: 1.833vw;
+        }
+        .header_main_button_first{
+            width: 16.667vw;
+            height: 5.000vw;
+        }
+        .header_main_button_first button {
+            font-size: 1.700vw;
+        }
+   
+   }
+   @media (max-width: 450px){
+    .offer_card_title{
+           font-size: 3.111vw;
+        }
+        .offer_card_text{
+           font-size: 2.222vw;
+        }
+        .offer_card{
+            margin-bottom: 8.889vw;
+        }
+   
+   }
